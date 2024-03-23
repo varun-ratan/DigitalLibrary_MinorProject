@@ -1,12 +1,15 @@
 Digital Library
 23rd of March 24
+
 OVERVIEW
+
 GOALS
 1. Create an ER diagram based on the database schema
 2. Create API/endpoints as per the specified controllers
 3. Adding Spring Security [Hold]
 4. Adding Redis as database query cache [Hold]
 5. Adding database seed file [Hold]
+   
 SPECIFICATIONS
 Entities:
 1. Book
@@ -15,6 +18,7 @@ Entities:
 4. Student
 5. Card
 6. Transaction
+   
 Database Schema
 Author
 1. Id
@@ -22,6 +26,7 @@ Author
 3. Email
 4. Age
 5. country
+   
 Book
 1. Id
 2. Name
@@ -32,6 +37,7 @@ Book
 7. Genre
 8. ISBN Number
 9. Published Date
+    
 User [Hold]
 1. Id
 2. Name
@@ -39,6 +45,7 @@ User [Hold]
 4. Email
 5. Password
 6. Authority
+   
 Student
 1. Id
 2. Age
@@ -49,6 +56,7 @@ Student
 7. CreatedOn
 8. UpdatedOn
 9. CardID
+    
 Card
 1. Id
 2. Status
@@ -56,6 +64,7 @@ Card
 4. ValidUpto
 5. CreatedOn
 6. UpdatedOn
+   
 Transaction
 1. Id
 2. CardId
@@ -68,6 +77,7 @@ Transaction
 9. Status
 10. CreatedOn
 11. UpdatedOn
+    
 Entities Relation
 Source Destination Relation
 Student Card 1-1
@@ -77,12 +87,15 @@ Card Transaction 1-N
 Controllers/API
 Student Controller
 RequestMapping: /student/<endpoint>
+
 1. CRUD API for Student
 Book Controller
 RequestMapping: /book/<endpoint>
+
 1. CRUD API for Book
 Author Controller
 RequestMapping: /author/<endpoint>
+
 1. CRUD API for Author
 Transaction Controller
 RequestMapping: /transact/<endpoint>
